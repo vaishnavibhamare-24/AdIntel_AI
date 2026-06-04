@@ -1,4 +1,3 @@
-# AdIntel_AI
 
 <div align="center">
 
