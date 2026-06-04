@@ -486,32 +486,6 @@ The architectural contracts stay identical when scaling. Swap one component at a
 
 ---
 
-## Resume Bullets
-
-```
-Built AdIntel AI, a production multi-agent RAG platform for marketing intelligence using
-LangChain AgentExecutor to route queries across three domain-specialized agents (campaign
-analysis, audience segmentation, ad copy generation), achieving sub-500ms end-to-end
-latency via Groq LLM (llama3-70b-8192).
-
-Implemented HyDE (Hypothetical Document Embeddings) retrieval pipeline — LLM generates
-a hypothetical answer before embedding, improving semantic recall on short marketing
-queries vs standard cosine search; evaluated with RAGAS (faithfulness >0.90, answer
-relevancy >0.85) and traced end-to-end with LangSmith.
-
-Designed event-driven document ingestion using Redis Streams with async Uvicorn consumer
-workers, processing five source types into ChromaDB vector collections — decoupling
-ingestion from query serving for non-blocking API performance (<100ms ingest response).
-
-Containerized full application stack with Docker, deployed to AWS ECS Fargate behind
-an Application Load Balancer with HTTPS; secrets managed via AWS Secrets Manager;
-CI/CD via GitHub Actions → ECR → ECS rolling deploy.
-
-Built a retrieval quality feedback loop — user ratings and RAGAS scores stored in
-MongoDB Atlas, visualized in a live Streamlit dashboard — enabling continuous
-measurement of agent performance post-deployment.
-```
-
 ---
 
 <div align="center">
